@@ -235,13 +235,30 @@ Usage: djinni [options]
 
 
 
-### (2) HelloWorld示例
+## 2、使用djinni的HelloWorld示例
 
-这里的HelloWorld示例，参考这篇文章的步骤[^2]
+创建一个支持多平台的C++工程，实际包含两个部分
+
+* C++库的提供者，包括接口文件以及C++产物
+* C++库的使用者，即各个平台（Android/iOS等）的工程
+
+说明
+
+> 如果C++库的使用者的代码，不在这个C++工程中，C++工程也应该包括各个平台的测试工程
+
+这里HelloWorld示例，介绍一个完整的跨平台工程的搭建过程。
+
+
+
+### (1) 生成接口文件
+
+生成接口文件的步骤，参考这篇文章的步骤[^2]
 
 * 准备好接口生成工具和编译工具
+* 创建工程结构
 * 创建djinni文件
 * 创建shell文件
+* 执行shell文件，生成接口文件
 
 
 
@@ -260,18 +277,41 @@ $ which gn
 
 
 
+#### b. 创建工程结构
+
+HelloWorld工程，包含两部分内容
+
+* 生成HelloWorld库，包含头文件等
+* 使用HelloWorld库的各个平台的工程
+
+目前列出生成HelloWorld库所需要的目录结构，如下
+
+```shell
+$ tree .
+.
+├── generated
+├── idl
+│   └── HelloWorld.djinni
+├── run_djinni.sh
+└── src
+    └── hello_world_impl.cpp
+```
+
+* generated是接口文件生成的地方
+* idl是放djinni文件的地方
+* run_djinni.sh是运行djinni命令的脚本
+* src是放C++代码的地方
 
 
 
-
-#### b. 创建djinni文件
+#### c. 创建djinni文件
 
 以`HelloWorld.djinni`文件为例，如下
 
 ```c++
 HelloWorld = interface +c {
     static create(): HelloWorld;
-    fromCpp(): string
+    fromCpp(): string;
 }
 ```
 
@@ -279,7 +319,7 @@ HelloWorld = interface +c {
 
 
 
-#### c. 创建shell文件
+#### d. 创建shell文件
 
 由于run命令的参数很多，需要配置各个平台的对应参数，一般会写driver脚本(驱动脚本)。
 
@@ -289,12 +329,18 @@ HelloWorld = interface +c {
 #! /usr/bin/env bash
 
 # base config
-djinni_file="HelloWorld.djinni"
 base_dir=$(cd $(dirname 0) && pwd)
+
+# idl config
+# CONFIG start---
+idl_folder="idl"
+idl_file="HelloWorld.djinni"
+# CONFIG end---
+djinni_file="$base_dir/$idl_folder/$idl_file"
 
 # cpp config
 cpp_out="$base_dir/generated/cpp"
-namespace="hellodjinni"
+namespace="HelloDjinni"
 
 # java config
 jni_out="$base_dir/generated/jni"
@@ -323,19 +369,30 @@ djinni \
    --objcpp-out $objc_out \
    \
    --idl $djinni_file
+
 ```
 
+上面生成cpp、java、jni和oc的接口文件。
 
 
 
-
-#### b. 执行djinni，生成胶水头文件
+#### e. 执行shell文件，生成接口文件
 
 ```shell
-
+$ ./run_djinni.sh
+Already up to date: Djinni
+Parsing...
+Resolving...
+Generating...
 ```
 
+如果djinni执行成功，应该上面的输出提示。
 
+
+
+### (2) 编译C++并生成产物
+
+编译C++
 
 
 

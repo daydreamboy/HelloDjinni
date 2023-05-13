@@ -1,0 +1,5 @@
+static_library("HelloWorld") {
+  sources = [
+    "src/hello_world_impl.cpp",
+  ]
+}

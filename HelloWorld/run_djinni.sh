@@ -1,12 +1,18 @@
 #! /usr/bin/env bash
 
 # base config
-djinni_file="HelloWorld.djinni"
 base_dir=$(cd $(dirname 0) && pwd)
+
+# idl config
+# CONFIG start---
+idl_folder="idl"
+idl_file="HelloWorld.djinni"
+# CONFIG end---
+djinni_file="$base_dir/$idl_folder/$idl_file"
 
 # cpp config
 cpp_out="$base_dir/generated/cpp"
-namespace="hellodjinni"
+namespace="HelloDjinni"
 
 # java config
 jni_out="$base_dir/generated/jni"
