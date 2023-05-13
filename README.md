@@ -31,7 +31,48 @@ Djinni目前有两个github版本
 
 
 
+### (1) djinni命令行工具
 
+使用[Dropbox版本](https://github.com/dropbox/djinni)的git源码，在src文件下找到run文件。这个可执行文件是djinni命令行工具。
+
+查看帮助信息，如下
+
+```shell
+$ src/run --help
+Already up to date: Djinni
+Usage: djinni [options]
+
+  --help
+...
+```
+
+说明
+
+> 1. 首次执行命令会进行编译过程，需要一点时间
+>
+> 2. 为了方便在其他地方使用，可以设置run的别名，并将所在文件夹导入到环境变量PATH中
+>
+>    ```shell
+>    $ cd src    
+>    $ ln -s run djinni
+>    ```
+>
+>    这里以使用zsh为例，添加下行代码
+>
+>    ```shell
+>    export PATH="$PATH:$HOME/GitHub_Projects/HelloDjinni/djinni/src"
+>    ```
+>
+>    在新开Terminal中，执行`djinni --help`
+>
+>    ```shell
+>    $ djinni --help
+>    Already up to date: Djinni
+>    Usage: djinni [options]
+>    ...
+>    ```
+>
+> 3. run命令实际是bash脚本
 
 
 
