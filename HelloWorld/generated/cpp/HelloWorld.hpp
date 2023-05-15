@@ -14,7 +14,7 @@ public:
 
     static std::shared_ptr<HelloWorld> create();
 
-    virtual std::string fromCpp() = 0;
+    virtual std::string helloFromCpp() = 0;
 };
 
 }  // namespace HelloDjinni

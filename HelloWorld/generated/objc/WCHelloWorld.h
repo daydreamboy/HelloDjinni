@@ -9,6 +9,6 @@
 
 + (nullable WCHelloWorld *)create;
 
-- (nonnull NSString *)fromCpp;
+- (nonnull NSString *)helloFromCpp;
 
 @end

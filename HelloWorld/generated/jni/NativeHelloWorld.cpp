@@ -28,12 +28,12 @@ CJNIEXPORT jobject JNICALL Java_com_mycompany_hellodjinni_HelloWorld_00024CppPro
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }
 
-CJNIEXPORT jstring JNICALL Java_com_mycompany_hellodjinni_HelloWorld_00024CppProxy_native_1fromCpp(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef)
+CJNIEXPORT jstring JNICALL Java_com_mycompany_hellodjinni_HelloWorld_00024CppProxy_native_1helloFromCpp(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef)
 {
     try {
         DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
         const auto& ref = ::djinni::objectFromHandleAddress<::HelloDjinni::HelloWorld>(nativeRef);
-        auto r = ref->fromCpp();
+        auto r = ref->helloFromCpp();
         return ::djinni::release(::djinni::String::fromCpp(jniEnv, r));
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }

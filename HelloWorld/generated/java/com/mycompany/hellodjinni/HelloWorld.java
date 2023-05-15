@@ -6,7 +6,7 @@ package com.mycompany.hellodjinni;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public abstract class HelloWorld {
-    public abstract String fromCpp();
+    public abstract String helloFromCpp();
 
     public static HelloWorld create()
     {
@@ -37,12 +37,12 @@ public abstract class HelloWorld {
         }
 
         @Override
-        public String fromCpp()
+        public String helloFromCpp()
         {
             assert !this.destroyed.get() : "trying to use a destroyed object";
-            return native_fromCpp(this.nativeRef);
+            return native_helloFromCpp(this.nativeRef);
         }
-        private native String native_fromCpp(long _nativeRef);
+        private native String native_helloFromCpp(long _nativeRef);
 
         public static native HelloWorld create();
     }

@@ -5,13 +5,13 @@ using namespace HelloDjinni;
 class HelloWorldImpl : public HelloWorld {
 public:
     static std::shared_ptr<HelloWorld> create();
-    std::string fromCpp();
+    std::string helloFromCpp();
 };
 
 std::shared_ptr<HelloWorld> HelloWorldImpl::create() {
     return std::make_shared<HelloWorldImpl>();
 }
 
-std::string HelloWorldImpl::fromCpp() {
+std::string HelloWorldImpl::helloFromCpp() {
     return "Hello From C++!";
 }
