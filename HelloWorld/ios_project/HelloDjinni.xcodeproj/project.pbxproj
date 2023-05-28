@@ -12,9 +12,12 @@
 		4F436E9C2A0CD8E9000D1F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F436E9B2A0CD8E9000D1F4A /* Assets.xcassets */; };
 		4F436E9F2A0CD8E9000D1F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F436E9D2A0CD8E9000D1F4A /* LaunchScreen.storyboard */; };
 		4F436EA22A0CD8E9000D1F4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F436EA12A0CD8E9000D1F4A /* main.m */; };
-		4F532A5D2A121A2700A69160 /* libHelloWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F532A5C2A121A2600A69160 /* libHelloWorld.a */; };
 		4F532A632A121A9900A69160 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F532A5E2A121A9900A69160 /* RootViewController.m */; };
-		4F532A642A121A9900A69160 /* Demo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F532A602A121A9900A69160 /* Demo1ViewController.m */; };
+		4F7C30002A23795300B7F7C9 /* UseCppStaticLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C2FFF2A23795300B7F7C9 /* UseCppStaticLibViewController.m */; };
+		4F7C30052A237A2C00B7F7C9 /* WCHelloWorld+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C30032A237A2C00B7F7C9 /* WCHelloWorld+Private.mm */; };
+		4F7C300D2A237AE800B7F7C9 /* DJIProxyCaches.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C30072A237AE700B7F7C9 /* DJIProxyCaches.mm */; };
+		4F7C300E2A237AE800B7F7C9 /* DJIError.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C300A2A237AE700B7F7C9 /* DJIError.mm */; };
+		4F7C30102A237BFA00B7F7C9 /* libHelloWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7C300F2A237BFA00B7F7C9 /* libHelloWorld.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +30,19 @@
 		4F436EA12A0CD8E9000D1F4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F532A5C2A121A2600A69160 /* libHelloWorld.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHelloWorld.a; path = ../out/obj/libHelloWorld.a; sourceTree = "<group>"; };
 		4F532A5E2A121A9900A69160 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		4F532A602A121A9900A69160 /* Demo1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo1ViewController.m; sourceTree = "<group>"; };
-		4F532A612A121A9900A69160 /* Demo1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo1ViewController.h; sourceTree = "<group>"; };
 		4F532A622A121A9900A69160 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		4F7C2FFE2A23795300B7F7C9 /* UseCppStaticLibViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UseCppStaticLibViewController.h; sourceTree = "<group>"; };
+		4F7C2FFF2A23795300B7F7C9 /* UseCppStaticLibViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UseCppStaticLibViewController.m; sourceTree = "<group>"; };
+		4F7C30022A237A2C00B7F7C9 /* WCHelloWorld+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WCHelloWorld+Private.h"; path = "../../../generated/objc/WCHelloWorld+Private.h"; sourceTree = "<group>"; };
+		4F7C30032A237A2C00B7F7C9 /* WCHelloWorld+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "WCHelloWorld+Private.mm"; path = "../../../generated/objc/WCHelloWorld+Private.mm"; sourceTree = "<group>"; };
+		4F7C30042A237A2C00B7F7C9 /* WCHelloWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCHelloWorld.h; path = ../../../generated/objc/WCHelloWorld.h; sourceTree = "<group>"; };
+		4F7C30072A237AE700B7F7C9 /* DJIProxyCaches.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DJIProxyCaches.mm; path = "../../../../djinni/support-lib/objc/DJIProxyCaches.mm"; sourceTree = "<group>"; };
+		4F7C30082A237AE700B7F7C9 /* DJIObjcWrapperCache+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DJIObjcWrapperCache+Private.h"; path = "../../../../djinni/support-lib/objc/DJIObjcWrapperCache+Private.h"; sourceTree = "<group>"; };
+		4F7C30092A237AE700B7F7C9 /* DJICppWrapperCache+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DJICppWrapperCache+Private.h"; path = "../../../../djinni/support-lib/objc/DJICppWrapperCache+Private.h"; sourceTree = "<group>"; };
+		4F7C300A2A237AE700B7F7C9 /* DJIError.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DJIError.mm; path = "../../../../djinni/support-lib/objc/DJIError.mm"; sourceTree = "<group>"; };
+		4F7C300B2A237AE800B7F7C9 /* DJIMarshal+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DJIMarshal+Private.h"; path = "../../../../djinni/support-lib/objc/DJIMarshal+Private.h"; sourceTree = "<group>"; };
+		4F7C300C2A237AE800B7F7C9 /* DJIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DJIError.h; path = "../../../../djinni/support-lib/objc/DJIError.h"; sourceTree = "<group>"; };
+		4F7C300F2A237BFA00B7F7C9 /* libHelloWorld.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHelloWorld.a; path = ../ios_out/all/obj/libHelloWorld.a; sourceTree = "<group>"; };
 		5A30C2D42566DC2F0A7A1E0C /* Pods-HelloDjinni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDjinni.debug.xcconfig"; path = "Target Support Files/Pods-HelloDjinni/Pods-HelloDjinni.debug.xcconfig"; sourceTree = "<group>"; };
 		5BAC3F8262269827253366DD /* Pods_HelloDjinni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloDjinni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5740B40DB71423EB534797 /* Pods-HelloDjinni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDjinni.release.xcconfig"; path = "Target Support Files/Pods-HelloDjinni/Pods-HelloDjinni.release.xcconfig"; sourceTree = "<group>"; };
@@ -41,7 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				360C5D01166867909BA9EB89 /* Pods_HelloDjinni.framework in Frameworks */,
-				4F532A5D2A121A2700A69160 /* libHelloWorld.a in Frameworks */,
+				4F7C30102A237BFA00B7F7C9 /* libHelloWorld.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				4F532A5C2A121A2600A69160 /* libHelloWorld.a */,
+				4F7C300F2A237BFA00B7F7C9 /* libHelloWorld.a */,
 				5BAC3F8262269827253366DD /* Pods_HelloDjinni.framework */,
 			);
 			name = Frameworks;
@@ -78,6 +92,8 @@
 		4F436E8E2A0CD8E5000D1F4A /* HelloDjinni */ = {
 			isa = PBXGroup;
 			children = (
+				4F7C30062A237AC700B7F7C9 /* djinni_lib */,
+				4F7C30012A2379FB00B7F7C9 /* djinni_objc_interfaces */,
 				4F532A5F2A121A9900A69160 /* AppTestDemos */,
 				4F436E8F2A0CD8E5000D1F4A /* AppDelegate.h */,
 				4F436E902A0CD8E5000D1F4A /* AppDelegate.m */,
@@ -94,10 +110,33 @@
 		4F532A5F2A121A9900A69160 /* AppTestDemos */ = {
 			isa = PBXGroup;
 			children = (
-				4F532A612A121A9900A69160 /* Demo1ViewController.h */,
-				4F532A602A121A9900A69160 /* Demo1ViewController.m */,
+				4F7C2FFE2A23795300B7F7C9 /* UseCppStaticLibViewController.h */,
+				4F7C2FFF2A23795300B7F7C9 /* UseCppStaticLibViewController.m */,
 			);
 			path = AppTestDemos;
+			sourceTree = "<group>";
+		};
+		4F7C30012A2379FB00B7F7C9 /* djinni_objc_interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C30042A237A2C00B7F7C9 /* WCHelloWorld.h */,
+				4F7C30022A237A2C00B7F7C9 /* WCHelloWorld+Private.h */,
+				4F7C30032A237A2C00B7F7C9 /* WCHelloWorld+Private.mm */,
+			);
+			path = djinni_objc_interfaces;
+			sourceTree = "<group>";
+		};
+		4F7C30062A237AC700B7F7C9 /* djinni_lib */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C30092A237AE700B7F7C9 /* DJICppWrapperCache+Private.h */,
+				4F7C300C2A237AE800B7F7C9 /* DJIError.h */,
+				4F7C300A2A237AE700B7F7C9 /* DJIError.mm */,
+				4F7C300B2A237AE800B7F7C9 /* DJIMarshal+Private.h */,
+				4F7C30082A237AE700B7F7C9 /* DJIObjcWrapperCache+Private.h */,
+				4F7C30072A237AE700B7F7C9 /* DJIProxyCaches.mm */,
+			);
+			path = djinni_lib;
 			sourceTree = "<group>";
 		};
 		FB392D40142B498AF24BC1A0 /* Pods */ = {
@@ -204,10 +243,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7C300E2A237AE800B7F7C9 /* DJIError.mm in Sources */,
+				4F7C30002A23795300B7F7C9 /* UseCppStaticLibViewController.m in Sources */,
+				4F7C30052A237A2C00B7F7C9 /* WCHelloWorld+Private.mm in Sources */,
 				4F436E912A0CD8E5000D1F4A /* AppDelegate.m in Sources */,
-				4F532A642A121A9900A69160 /* Demo1ViewController.m in Sources */,
 				4F436EA22A0CD8E9000D1F4A /* main.m in Sources */,
 				4F532A632A121A9900A69160 /* RootViewController.m in Sources */,
+				4F7C300D2A237AE800B7F7C9 /* DJIProxyCaches.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +385,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U7337LU6F2;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../generated/cpp/";
 				INFOPLIST_FILE = HelloDjinni/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -353,7 +397,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../out/obj";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../ios_out/all/obj";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wc.HelloDjinni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -370,6 +414,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U7337LU6F2;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../generated/cpp/";
 				INFOPLIST_FILE = HelloDjinni/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -380,7 +426,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../out/obj";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../ios_out/all/obj";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wc.HelloDjinni;
 				PRODUCT_NAME = "$(TARGET_NAME)";

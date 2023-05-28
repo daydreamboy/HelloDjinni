@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 
-#import "Demo1ViewController.h"
+#import "UseCppStaticLibViewController.h"
 
 @interface RootViewController ()
 @property (nonatomic, strong) NSArray *titles;
@@ -35,7 +35,7 @@
         @"call a test method",
     ];
     _classes = @[
-        [Demo1ViewController class],
+        [UseCppStaticLibViewController class],
         @"testMethod",
     ];
 }
