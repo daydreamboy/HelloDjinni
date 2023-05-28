@@ -18,7 +18,38 @@
 		4F7C300D2A237AE800B7F7C9 /* DJIProxyCaches.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C30072A237AE700B7F7C9 /* DJIProxyCaches.mm */; };
 		4F7C300E2A237AE800B7F7C9 /* DJIError.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C300A2A237AE700B7F7C9 /* DJIError.mm */; };
 		4F7C30102A237BFA00B7F7C9 /* libHelloWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7C300F2A237BFA00B7F7C9 /* libHelloWorld.a */; };
+		4F7C30192A23821B00B7F7C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C30182A23821B00B7F7C9 /* AppDelegate.m */; };
+		4F7C30242A23821E00B7F7C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7C30232A23821E00B7F7C9 /* Assets.xcassets */; };
+		4F7C30272A23821E00B7F7C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F7C30252A23821E00B7F7C9 /* LaunchScreen.storyboard */; };
+		4F7C302A2A23821E00B7F7C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C30292A23821E00B7F7C9 /* main.m */; };
+		4F7C303D2A23826200B7F7C9 /* hello_world_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C303C2A23826200B7F7C9 /* hello_world_impl.cpp */; };
+		4F7C30432A2382DE00B7F7C9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C303E2A2382DE00B7F7C9 /* RootViewController.m */; };
+		4F7C30442A2382DE00B7F7C9 /* UseCppStaticLibViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C30402A2382DE00B7F7C9 /* UseCppStaticLibViewController.mm */; };
+		4F7C30472A23830000B7F7C9 /* libCppStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7C30322A23823C00B7F7C9 /* libCppStaticLib.a */; };
+		4F7C30492A2383B400B7F7C9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7C30482A2383B400B7F7C9 /* libc++.tbd */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F7C30452A2382F900B7F7C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F436E842A0CD8E5000D1F4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F7C30312A23823C00B7F7C9;
+			remoteInfo = CppStaticLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4F7C30302A23823C00B7F7C9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4F436E8C2A0CD8E5000D1F4A /* HelloDjinni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloDjinni.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +74,21 @@
 		4F7C300B2A237AE800B7F7C9 /* DJIMarshal+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DJIMarshal+Private.h"; path = "../../../../djinni/support-lib/objc/DJIMarshal+Private.h"; sourceTree = "<group>"; };
 		4F7C300C2A237AE800B7F7C9 /* DJIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DJIError.h; path = "../../../../djinni/support-lib/objc/DJIError.h"; sourceTree = "<group>"; };
 		4F7C300F2A237BFA00B7F7C9 /* libHelloWorld.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHelloWorld.a; path = ../ios_out/all/obj/libHelloWorld.a; sourceTree = "<group>"; };
+		4F7C30152A23821B00B7F7C9 /* UseCppStaticLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UseCppStaticLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F7C30172A23821B00B7F7C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4F7C30182A23821B00B7F7C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F7C30232A23821E00B7F7C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F7C30262A23821E00B7F7C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4F7C30282A23821E00B7F7C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F7C30292A23821E00B7F7C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F7C30322A23823C00B7F7C9 /* libCppStaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCppStaticLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F7C303B2A23826200B7F7C9 /* HelloWorld.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HelloWorld.hpp; sourceTree = "<group>"; };
+		4F7C303C2A23826200B7F7C9 /* hello_world_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hello_world_impl.cpp; sourceTree = "<group>"; };
+		4F7C303E2A2382DE00B7F7C9 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		4F7C30402A2382DE00B7F7C9 /* UseCppStaticLibViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UseCppStaticLibViewController.mm; sourceTree = "<group>"; };
+		4F7C30412A2382DE00B7F7C9 /* UseCppStaticLibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseCppStaticLibViewController.h; sourceTree = "<group>"; };
+		4F7C30422A2382DE00B7F7C9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		4F7C30482A2383B400B7F7C9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		5A30C2D42566DC2F0A7A1E0C /* Pods-HelloDjinni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDjinni.debug.xcconfig"; path = "Target Support Files/Pods-HelloDjinni/Pods-HelloDjinni.debug.xcconfig"; sourceTree = "<group>"; };
 		5BAC3F8262269827253366DD /* Pods_HelloDjinni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloDjinni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5740B40DB71423EB534797 /* Pods-HelloDjinni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDjinni.release.xcconfig"; path = "Target Support Files/Pods-HelloDjinni/Pods-HelloDjinni.release.xcconfig"; sourceTree = "<group>"; };
@@ -58,12 +104,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4F7C30122A23821B00B7F7C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7C30492A2383B400B7F7C9 /* libc++.tbd in Frameworks */,
+				4F7C30472A23830000B7F7C9 /* libCppStaticLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7C302F2A23823C00B7F7C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		30E8A1328873EB493D7EAC4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F7C30482A2383B400B7F7C9 /* libc++.tbd */,
 				4F532A5C2A121A2600A69160 /* libHelloWorld.a */,
 				4F7C300F2A237BFA00B7F7C9 /* libHelloWorld.a */,
 				5BAC3F8262269827253366DD /* Pods_HelloDjinni.framework */,
@@ -75,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				4F436E8E2A0CD8E5000D1F4A /* HelloDjinni */,
+				4F7C30162A23821B00B7F7C9 /* UseCppStaticLib */,
+				4F7C30332A23823C00B7F7C9 /* CppStaticLib */,
 				4F436E8D2A0CD8E5000D1F4A /* Products */,
 				FB392D40142B498AF24BC1A0 /* Pods */,
 				30E8A1328873EB493D7EAC4C /* Frameworks */,
@@ -85,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				4F436E8C2A0CD8E5000D1F4A /* HelloDjinni.app */,
+				4F7C30152A23821B00B7F7C9 /* UseCppStaticLib.app */,
+				4F7C30322A23823C00B7F7C9 /* libCppStaticLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +206,40 @@
 			path = djinni_lib;
 			sourceTree = "<group>";
 		};
+		4F7C30162A23821B00B7F7C9 /* UseCppStaticLib */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C303F2A2382DE00B7F7C9 /* AppTestDemos */,
+				4F7C30422A2382DE00B7F7C9 /* RootViewController.h */,
+				4F7C303E2A2382DE00B7F7C9 /* RootViewController.m */,
+				4F7C30172A23821B00B7F7C9 /* AppDelegate.h */,
+				4F7C30182A23821B00B7F7C9 /* AppDelegate.m */,
+				4F7C30232A23821E00B7F7C9 /* Assets.xcassets */,
+				4F7C30252A23821E00B7F7C9 /* LaunchScreen.storyboard */,
+				4F7C30282A23821E00B7F7C9 /* Info.plist */,
+				4F7C30292A23821E00B7F7C9 /* main.m */,
+			);
+			path = UseCppStaticLib;
+			sourceTree = "<group>";
+		};
+		4F7C30332A23823C00B7F7C9 /* CppStaticLib */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C303C2A23826200B7F7C9 /* hello_world_impl.cpp */,
+				4F7C303B2A23826200B7F7C9 /* HelloWorld.hpp */,
+			);
+			path = CppStaticLib;
+			sourceTree = "<group>";
+		};
+		4F7C303F2A2382DE00B7F7C9 /* AppTestDemos */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C30412A2382DE00B7F7C9 /* UseCppStaticLibViewController.h */,
+				4F7C30402A2382DE00B7F7C9 /* UseCppStaticLibViewController.mm */,
+			);
+			path = AppTestDemos;
+			sourceTree = "<group>";
+		};
 		FB392D40142B498AF24BC1A0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +270,41 @@
 			productReference = 4F436E8C2A0CD8E5000D1F4A /* HelloDjinni.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4F7C30142A23821B00B7F7C9 /* UseCppStaticLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F7C302B2A23821E00B7F7C9 /* Build configuration list for PBXNativeTarget "UseCppStaticLib" */;
+			buildPhases = (
+				4F7C30112A23821B00B7F7C9 /* Sources */,
+				4F7C30122A23821B00B7F7C9 /* Frameworks */,
+				4F7C30132A23821B00B7F7C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F7C30462A2382F900B7F7C9 /* PBXTargetDependency */,
+			);
+			name = UseCppStaticLib;
+			productName = UseCppStaticLib;
+			productReference = 4F7C30152A23821B00B7F7C9 /* UseCppStaticLib.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F7C30312A23823C00B7F7C9 /* CppStaticLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F7C30382A23823C00B7F7C9 /* Build configuration list for PBXNativeTarget "CppStaticLib" */;
+			buildPhases = (
+				4F7C302E2A23823C00B7F7C9 /* Sources */,
+				4F7C302F2A23823C00B7F7C9 /* Frameworks */,
+				4F7C30302A23823C00B7F7C9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CppStaticLib;
+			productName = CppStaticLib;
+			productReference = 4F7C30322A23823C00B7F7C9 /* libCppStaticLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -179,6 +315,12 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					4F436E8B2A0CD8E5000D1F4A = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					4F7C30142A23821B00B7F7C9 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					4F7C30312A23823C00B7F7C9 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
@@ -197,6 +339,8 @@
 			projectRoot = "";
 			targets = (
 				4F436E8B2A0CD8E5000D1F4A /* HelloDjinni */,
+				4F7C30142A23821B00B7F7C9 /* UseCppStaticLib */,
+				4F7C30312A23823C00B7F7C9 /* CppStaticLib */,
 			);
 		};
 /* End PBXProject section */
@@ -208,6 +352,15 @@
 			files = (
 				4F436E9F2A0CD8E9000D1F4A /* LaunchScreen.storyboard in Resources */,
 				4F436E9C2A0CD8E9000D1F4A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7C30132A23821B00B7F7C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7C30272A23821E00B7F7C9 /* LaunchScreen.storyboard in Resources */,
+				4F7C30242A23821E00B7F7C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,13 +406,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4F7C30112A23821B00B7F7C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7C30192A23821B00B7F7C9 /* AppDelegate.m in Sources */,
+				4F7C302A2A23821E00B7F7C9 /* main.m in Sources */,
+				4F7C30442A2382DE00B7F7C9 /* UseCppStaticLibViewController.mm in Sources */,
+				4F7C30432A2382DE00B7F7C9 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7C302E2A23823C00B7F7C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7C303D2A23826200B7F7C9 /* hello_world_impl.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F7C30462A2382F900B7F7C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F7C30312A23823C00B7F7C9 /* CppStaticLib */;
+			targetProxy = 4F7C30452A2382F900B7F7C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4F436E9D2A0CD8E9000D1F4A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4F436E9E2A0CD8E9000D1F4A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4F7C30252A23821E00B7F7C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F7C30262A23821E00B7F7C9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -435,6 +623,76 @@
 			};
 			name = Release;
 		};
+		4F7C302C2A23821E00B7F7C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = UseCppStaticLib/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wc.UseCppStaticLib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F7C302D2A23821E00B7F7C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = UseCppStaticLib/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wc.UseCppStaticLib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4F7C30392A23823C00B7F7C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F7C303A2A23823C00B7F7C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -452,6 +710,24 @@
 			buildConfigurations = (
 				4F436EA62A0CD8E9000D1F4A /* Debug */,
 				4F436EA72A0CD8E9000D1F4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F7C302B2A23821E00B7F7C9 /* Build configuration list for PBXNativeTarget "UseCppStaticLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7C302C2A23821E00B7F7C9 /* Debug */,
+				4F7C302D2A23821E00B7F7C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F7C30382A23823C00B7F7C9 /* Build configuration list for PBXNativeTarget "CppStaticLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7C30392A23823C00B7F7C9 /* Debug */,
+				4F7C303A2A23823C00B7F7C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,4 +1,4 @@
-#include "../generated/cpp/HelloWorld.hpp"
+#include "HelloWorld.hpp"
 
 using namespace HelloDjinni;
 
