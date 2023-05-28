@@ -33,4 +33,5 @@
 
 # GN
 out/
+ios_out/
 
