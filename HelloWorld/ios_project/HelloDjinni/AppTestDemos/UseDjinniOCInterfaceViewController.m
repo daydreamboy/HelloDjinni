@@ -5,14 +5,14 @@
 //  Created by wesley_chen on 2023/5/28.
 //
 
-#import "UseCppStaticLibViewController.h"
+#import "UseDjinniOCInterfaceViewController.h"
 #import "WCHelloWorld.h"
 
-@interface UseCppStaticLibViewController ()
+@interface UseDjinniOCInterfaceViewController ()
 
 @end
 
-@implementation UseCppStaticLibViewController
+@implementation UseDjinniOCInterfaceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

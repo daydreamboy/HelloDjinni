@@ -13,7 +13,7 @@
 		4F436E9F2A0CD8E9000D1F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F436E9D2A0CD8E9000D1F4A /* LaunchScreen.storyboard */; };
 		4F436EA22A0CD8E9000D1F4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F436EA12A0CD8E9000D1F4A /* main.m */; };
 		4F532A632A121A9900A69160 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F532A5E2A121A9900A69160 /* RootViewController.m */; };
-		4F7C30002A23795300B7F7C9 /* UseCppStaticLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C2FFF2A23795300B7F7C9 /* UseCppStaticLibViewController.m */; };
+		4F7C30002A23795300B7F7C9 /* UseDjinniOCInterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C2FFF2A23795300B7F7C9 /* UseDjinniOCInterfaceViewController.m */; };
 		4F7C30052A237A2C00B7F7C9 /* WCHelloWorld+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C30032A237A2C00B7F7C9 /* WCHelloWorld+Private.mm */; };
 		4F7C300D2A237AE800B7F7C9 /* DJIProxyCaches.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C30072A237AE700B7F7C9 /* DJIProxyCaches.mm */; };
 		4F7C300E2A237AE800B7F7C9 /* DJIError.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C300A2A237AE700B7F7C9 /* DJIError.mm */; };
@@ -62,8 +62,8 @@
 		4F532A5C2A121A2600A69160 /* libHelloWorld.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHelloWorld.a; path = ../out/obj/libHelloWorld.a; sourceTree = "<group>"; };
 		4F532A5E2A121A9900A69160 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		4F532A622A121A9900A69160 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		4F7C2FFE2A23795300B7F7C9 /* UseCppStaticLibViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UseCppStaticLibViewController.h; sourceTree = "<group>"; };
-		4F7C2FFF2A23795300B7F7C9 /* UseCppStaticLibViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UseCppStaticLibViewController.m; sourceTree = "<group>"; };
+		4F7C2FFE2A23795300B7F7C9 /* UseDjinniOCInterfaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UseDjinniOCInterfaceViewController.h; sourceTree = "<group>"; };
+		4F7C2FFF2A23795300B7F7C9 /* UseDjinniOCInterfaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UseDjinniOCInterfaceViewController.m; sourceTree = "<group>"; };
 		4F7C30022A237A2C00B7F7C9 /* WCHelloWorld+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WCHelloWorld+Private.h"; path = "../../../generated/objc/WCHelloWorld+Private.h"; sourceTree = "<group>"; };
 		4F7C30032A237A2C00B7F7C9 /* WCHelloWorld+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "WCHelloWorld+Private.mm"; path = "../../../generated/objc/WCHelloWorld+Private.mm"; sourceTree = "<group>"; };
 		4F7C30042A237A2C00B7F7C9 /* WCHelloWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCHelloWorld.h; path = ../../../generated/objc/WCHelloWorld.h; sourceTree = "<group>"; };
@@ -177,8 +177,8 @@
 		4F532A5F2A121A9900A69160 /* AppTestDemos */ = {
 			isa = PBXGroup;
 			children = (
-				4F7C2FFE2A23795300B7F7C9 /* UseCppStaticLibViewController.h */,
-				4F7C2FFF2A23795300B7F7C9 /* UseCppStaticLibViewController.m */,
+				4F7C2FFE2A23795300B7F7C9 /* UseDjinniOCInterfaceViewController.h */,
+				4F7C2FFF2A23795300B7F7C9 /* UseDjinniOCInterfaceViewController.m */,
 			);
 			path = AppTestDemos;
 			sourceTree = "<group>";
@@ -397,7 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7C300E2A237AE800B7F7C9 /* DJIError.mm in Sources */,
-				4F7C30002A23795300B7F7C9 /* UseCppStaticLibViewController.m in Sources */,
+				4F7C30002A23795300B7F7C9 /* UseDjinniOCInterfaceViewController.m in Sources */,
 				4F7C30052A237A2C00B7F7C9 /* WCHelloWorld+Private.mm in Sources */,
 				4F436E912A0CD8E5000D1F4A /* AppDelegate.m in Sources */,
 				4F436EA22A0CD8E9000D1F4A /* main.m in Sources */,
@@ -505,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -557,7 +557,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -578,7 +578,6 @@
 				INFOPLIST_FILE = HelloDjinni/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -607,7 +606,6 @@
 				INFOPLIST_FILE = HelloDjinni/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

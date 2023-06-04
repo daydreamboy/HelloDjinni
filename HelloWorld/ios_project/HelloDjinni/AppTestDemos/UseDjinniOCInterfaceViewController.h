@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UseCppStaticLibViewController : UIViewController
+@interface UseDjinniOCInterfaceViewController : UIViewController
 
 @end
 

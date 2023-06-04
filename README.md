@@ -493,7 +493,41 @@ ninja: Entering directory `out'
 
 说明
 
-> GN配置文件，这里不展开介绍。
+> GN配置文件，这里不展开介绍。参考HelloGN的README.md
+
+
+
+由于移动平台(Android/iOS)，存在模拟器和真机调试两种，因此使用GN编译需要多种CPU架构的二进制文件。
+
+这里以iOS为例，编译支持x64和arm64的静态库。
+
+```shell
+libName="libHelloWorld.a"
+
+if [[ $1 = "device" ]]; then
+  gn gen ios_out/arm64 --args='is_debug=true target_os="ios" target_cpu="arm64" ios_enable_code_signing=false'
+  ninja -C ios_out/arm64
+elif [[ $1 = "simulator" ]]; then
+  gn gen ios_out/x64 --args='is_debug=true target_os="ios" target_cpu="x64" ios_enable_code_signing=false'
+  ninja -C ios_out/x64
+elif [[ $1 = "all" ]]; then
+  gn gen ios_out/arm64 --args='is_debug=true target_os="ios" target_cpu="arm64" ios_enable_code_signing=false'
+  ninja -C ios_out/arm64
+
+  gn gen ios_out/x64 --args='is_debug=true target_os="ios" target_cpu="x64" ios_enable_code_signing=false'
+  ninja -C ios_out/x64
+
+  mkdir -p ./ios_out/all/obj
+  lipo -create ./ios_out/arm64/obj/${libName} ./ios_out/x64/obj/${libName} -o ./ios_out/all/obj/${libName}
+  echo "create static library ($1) successfully!"
+else
+  echo "Must support a parameter"
+fi
+```
+
+> 示例代码，见build_ios.sh
+
+上面执行`./build_ios.sh all`，通过lipo工具得到两种CPU架构的静态库libHelloWorld.a，这个库将在“iOS适配C++库”中使用。
 
 
 
@@ -514,9 +548,97 @@ ios_project
 └── Pods
 ```
 
+如果要使用上面编译好的C++库，这里以libHelloWorld.a为例，需要下面几个步骤
+
+* Xcode添加C++静态库
+  * Link Binrary with Libraries添加libHelloWorld.a
+* Xcode添加Djinni的支持库，有两种方式：源码引入，或者添加djinni_support_lib
+  * 源码引入：在Djinni源码仓库的根目录下找到support-lib/objc，有一些.h和.mm文件，它们是Djinni支持iOS使用Djinni生成接口的胶水代码。
+  * 添加djinni_support_lib：在support-lib/objc下面，有ios-build-support-lib.sh脚本，执行这个脚本可以编译出djinni_support_lib库。使用djinni_support_lib库，还需要djinni_support_lib库的头文件，这个头文件也在support-lib/objc中
+
+* Xcode添加Djinni生成接口文件
+
+* Xcode的Build Settings配置头文件和静态库的搜索路径
 
 
 
+##### Xcode添加C++静态库
+
+![](images/02_add_cpp_static_library.png)
+
+
+
+##### Xcode添加Djinni的支持库
+
+这里采用源码引入方式，在Djinni源码仓库的根目录下找到support-lib/objc，直接将下面的所有文件拖入到Xcode中，如下
+
+<img src="images/03_add_Djinni_support_lib_source_code.png" style="zoom:50%; float:left;" />
+
+
+
+##### Xcode添加Djinni生成接口文件
+
+在Djinni工程HelloWorld下面，找到之前Djinni生成的objc接口文件，位置在generated/objc，同样也拖入到Xcode工程中，如下
+
+<img src="images/04_add_Djinni_interfaces.png" style="zoom:50%; float:left;" />
+
+这里objc接口文件，实际是Objective-C使用C++的胶水代码。
+
+
+
+##### Xcode的Build Settings配置头文件和静态库的搜索路径
+
+Xcode的Build Settings，配置下面的路径，如下
+
+```properties
+HEADER_SEARCH_PATHS=$(SRCROOT)/../generated/cpp/
+LIBRARY_SEARCH_PATHS=$(SRCROOT)/../ios_out/all/obj
+```
+
+上面cpp文件夹是提供给上面Djinni生成接口文件的C++头文件，而ios_out/all/obj是之前编译好的libHelloWorld.a所在文件夹。
+
+
+
+#### b. 使用Djinni的OC接口
+
+在使用Djinni的OC接口之前，可以编译下Xcode，确认上面的胶水代码和静态库是否正确。
+
+示例代码，如下
+
+```objective-c
+#import "WCHelloWorld.h"
+
+- (void)test {
+    WCHelloWorld *helloDjinniInterface = [WCHelloWorld create];
+    NSString *helloDjinni = [helloDjinniInterface helloFromCpp];
+    NSLog(@"%@", helloDjinni);
+}
+```
+
+可以看到Djinni的OC接口，完全屏蔽了C++接口调用，而且这部分胶水代码也是Djinni自动生成的，我们不用自己手写。
+
+> 示例代码，见UseDjinniOCInterfaceViewController
+
+
+
+#### c. 分析iOS工程的Djinni部分
+
+在上面两节中，可以看到如何向一个iOS工程添加Djinni相关库和接口文件。这里再总结下，Djinni部分的构成，用下面示意图表示。
+
+```shell
+iOS project
+|- Djinni Support Lib（可以是源码或者静态库集成）
+|- 用户自己的C++静态库（例如上面的libHelloWorld.a） (1)
+|- 用户通过Djinni生成的OC接口文件 (2)
+|- 使用OC接口文件的代码 (3)
+```
+
+当Djinni的IDL文件更新时，则需要通过上面(1)(2)(3)部分，而(1)和(2)不需要手动调整。
+
+按照开发者角色划分开发任务，如下
+
+* CPP开发，负责开发C++代码，维护IDL文件，并提供C++静态库
+* iOS开发，集成和更新C++静态库，调用Djinni生成的OC接口
 
 
 

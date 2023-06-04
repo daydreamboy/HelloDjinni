@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 
-#import "UseCppStaticLibViewController.h"
+#import "UseDjinniOCInterfaceViewController.h"
 
 @interface RootViewController ()
 @property (nonatomic, strong) NSArray *titles;
@@ -31,11 +31,11 @@
 
     // MARK: Configure titles and classes for table view
     _titles = @[
-        @"Demo1ViewController's title",
+        @"Use Djinni's OC interface",
         @"call a test method",
     ];
     _classes = @[
-        [UseCppStaticLibViewController class],
+        [UseDjinniOCInterfaceViewController class],
         @"testMethod",
     ];
 }
