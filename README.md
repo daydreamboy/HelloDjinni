@@ -652,6 +652,36 @@ iOS project
 
 
 
+## 3、分析Djinni源码
+
+### (1) Handle类
+
+support-lib/proxy_cache_interface.hpp
+
+```c++
+template <typename T, typename TagType = T>
+class Handle {
+public:
+    template <typename... Args> Handle(Args &&... args)
+        : m_cache(get_base()), m_obj(std::forward<Args>(args)...) {}
+    Handle(const Handle &) = delete;
+    Handle & operator=(const Handle &) = delete;
+    ~Handle() { if (m_obj) cleanup(m_cache, typeid(TagType), get_unowning(m_obj)); }
+
+    void assign(const T & obj) { m_obj = obj; }
+
+    const T & get() const & noexcept { return m_obj; }
+
+private:
+    const std::shared_ptr<Pimpl> m_cache;
+    T m_obj;
+};
+```
+
+
+
+
+
 ## References
 
 [^1]:https://djinni.xlcpp.dev/
